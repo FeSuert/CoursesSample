@@ -4,8 +4,8 @@ const Card = ({ course_id, name, org, start_display, image, short_description, b
     <div className="h-full container mx-auto p-6 hover:shadow-2xl max-w-sm bg-white rounded-lg border border-gray-200 shadow-md">
         <img className="object-cover h-48 w-96" src={image} alt={name} />
         <div className="p-5">
-            <h5 data-testid="name" className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{name}</h5>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{short_description}</p>
+            <h5 data-testid="name" className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{name}</h5>
+            <p className="mb-3 font-normal text-gray-700">{short_description}</p>
         </div>
         <div className="inset-x-0 bottom-0">
             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{start_display}</span>
