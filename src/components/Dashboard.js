@@ -1,9 +1,8 @@
 import coursesApi from "../api.json"
 import Card from "./Card"
 const Dashboard = () => {
-    console.log(coursesApi.results)
     return (
-        <div className="pt-20">
+        <div class="dashboard" className="pt-20">
             <h1 className="bg-blue-500 text-white">Courses:</h1>
             <div className="p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 place-items-center">
             {coursesApi.results.map((data) => (
@@ -15,10 +14,11 @@ const Dashboard = () => {
                     image={data.media.image.raw}
                     short_description={data.short_description}
                     blocks_url={data.blocks_url}
+                    data-testid="card"
+                    key={data.course_id}
                 />
             ))}
             </div>
-            <div className="bg-blue-600"></div>
         </div>
     )
 }
